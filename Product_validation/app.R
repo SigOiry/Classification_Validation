@@ -213,15 +213,16 @@ server <- function(input, output, session) {
                     lat = center_lat,
                     zoom = 15
                 ) %>% 
-                addPolygons(
-                    data = values$rasterExtent,
-                    color = "black",
-                    weight = 2,
-                    opacity = 1.0,
-                    fillOpacity = 0.5,
-                    fillColor = "red",
-                    group = "RasterExtent"
-                )
+                addRasterImage(values$raster, colors = terrain.colors(256), opacity = 0.8)
+                # addPolygons(
+                #     data = values$rasterExtent,
+                #     color = "black",
+                #     weight = 2,
+                #     opacity = 1.0,
+                #     fillOpacity = 0.5,
+                #     fillColor = "red",
+                #     group = "RasterExtent"
+                # )
         }
         
         # Add shapefile layer if available and valid
