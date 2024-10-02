@@ -1,2 +1,2 @@
 # Classification_Validation
-Shiny that let the user provide a Classified Raster and a validation shapefile and return the confusion matrix 
+Shiny app that allows the user to provide a classified raster and a validation shapefile and returns the confusion matrix.
